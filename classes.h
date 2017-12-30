@@ -12,4 +12,5 @@ public:
   void createFile ();
   void startWork ();
   void stopWork ();
+  void report ();
 };
