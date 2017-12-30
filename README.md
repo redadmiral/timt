@@ -4,13 +4,9 @@ timt is a time tracking tool. It tracks the amount of time spent on work for var
 
 ##Usage
 ###Setting up
-Create a new customer:
+Create a new task:
 ```
-timt new customer customername
-```
-Assign the customer a task:
-```
-timt new task taskname@customername
+timt new taskname customername
 ```
 
 ###Tracking time
