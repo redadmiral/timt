@@ -11,6 +11,9 @@ int main(int argc, char const *argv[]) {
   }  else if (argv [1] == (string) "stop") {
     Ctask task (argv[2]);
     task.stopWork();
+  } else if (argv [1] == (string) "report") {
+    Ctask task (argv[2]);
+    task.report();
   }
   else {std::cout << "No valid input." << '\n';}
   //std::cout << argv[1] << '\n';
