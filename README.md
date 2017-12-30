@@ -6,7 +6,7 @@ timt is a time tracking tool. It tracks the amount of time spent on work for var
 ### Setting up
 Create a new task:
 ```
-timt new taskname customername
+timt new taskname
 ```
 
 ### Tracking time
@@ -20,18 +20,11 @@ timt stop taskname
 ```
 
 ### Report
-Show everything:
+Show report for specific task:
 ```
-timt report
-```
-Show report for all tasks of one customer:
-```
-timt report customername
-```
-Show report for one specific task:
-```
-timt report customername taskname
+timt report taskname
 ```
 
 ## TODO
-- [ ] Allow users to report on specific periods of time
+- [ ] Allow users to filter report on specific periods of time.
+- [ ] Implement exception handling.
