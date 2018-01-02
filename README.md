@@ -1,6 +1,15 @@
 # timt
 timt is a CLI time tracking tool.
 
+## Installation
+
+There is not yet a makefile, but installation isn't this hard:
+
+1. `git clone` this repo
+2. Compile the code: `g++ main.cpp classes.h classes.cpp -o timt`
+3. Move the bin to /bin: `sudo mv timt /bin/`
+4. Create the directory for your tasks: `mkdir ~/.timt/`
+5. Profit.
 
 ## Usage
 ### Setting up
