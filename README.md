@@ -34,3 +34,4 @@ timt report taskname MM YY
 - [ ] Implement exception handling.
 - [ ] Create makefile.
 - [ ] Implement `list` function.
+- [ ] Code completion with TAB
