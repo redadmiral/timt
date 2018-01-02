@@ -18,7 +18,9 @@ void Ctask::getInformation () {
 };
 
 string Ctask::createFilename () {
-  return "." + m_taskname + ".csv";
+  string homedir;
+  homedir = getenv ("HOME");
+  return homedir + "/.timt/" + m_taskname + ".csv";
 };
 
 void Ctask::startWork () {
