@@ -12,5 +12,6 @@ public:
   void createFile ();
   void startWork ();
   void stopWork ();
-  void report ();
+  float report (int startdate = 0,int stopdate = 2000000000); //Jan 1970 - May 2033
+  void reportmonth (const char[], const char[]);
 };

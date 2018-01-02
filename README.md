@@ -20,11 +20,16 @@ timt stop taskname
 ```
 
 ### Report
-Show report for specific task:
+Show report for task:
 ```
 timt report taskname
+```
+Show report for task for a specific month:
+```
+timt report taskname MMYY
 ```
 
 ## TODO
 - [ ] Allow users to filter report on specific periods of time.
 - [ ] Implement exception handling.
+- [ ] Create makefile

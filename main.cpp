@@ -12,8 +12,12 @@ int main(int argc, char const *argv[]) {
     Ctask task (argv[2]);
     task.stopWork();
   } else if (argv [1] == (string) "report") {
+    if (argv [3]) {
+      Ctask task (argv [2]);
+      task.reportmonth(argv[3], argv[4]);
+    } else {
     Ctask task (argv[2]);
-    task.report();
+    task.report();}
   }
   else {std::cout << "No valid input." << '\n';}
   //std::cout << argv[1] << '\n';

@@ -43,7 +43,7 @@ void Ctask::stopWork () {
 
 //reads file created by startWork and stopWork
 
-void Ctask::report () {
+float Ctask::report (int startdate,int stopdate) {
     string filename = createFilename();
     //from https://stackoverflow.com/questions/7868936/read-file-line-by-line
     std::ifstream infile(filename);
@@ -52,9 +52,31 @@ void Ctask::report () {
     float result;
     while (infile >> start >> stop)
     {
-      sum_start += start;
-      sum_stop += stop;
+      if (start > startdate && start < stopdate) {
+        sum_start += start;
+        sum_stop += stop;
+      }
     }
     result = (float) (sum_stop - sum_start)/3600;
     std::cout << "You have worked for " << result << " hours on " << m_taskname << '\n';
+    return result;
   };
+
+void Ctask::reportmonth (const char month[], const char year[]) {
+  struct tm t;
+  struct tm * tp = &t;
+
+  t.tm_sec = 0;
+  t.tm_min = 0;
+  t.tm_hour = 0;
+  t.tm_mday = 1;
+  t.tm_mon = atoi(month) - 1;
+  t.tm_year = atoi(year) + 100;
+  t.tm_isdst = -1;
+
+  int starttime = timegm(tp);
+  t.tm_mon = atoi(month);
+  int stoptime = timegm(tp);
+
+  report(starttime, stoptime);
+};
