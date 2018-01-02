@@ -1,5 +1,5 @@
 # timt
-timt is a time tracking tool. It tracks the amount of time spent on work for various customers and different tasks for each customer. It also provides a handy summary.
+timt is a CLI time tracking tool.
 
 
 ## Usage
@@ -20,16 +20,17 @@ timt stop taskname
 ```
 
 ### Report
-Show report for task:
+Show report for a task:
 ```
 timt report taskname
 ```
-Show report for task for a specific month:
+Show report for a task in a specific month:
 ```
-timt report taskname MMYY
+timt report taskname MM YY
 ```
 
 ## TODO
 - [ ] Allow users to filter report on specific periods of time.
 - [ ] Implement exception handling.
-- [ ] Create makefile
+- [ ] Create makefile.
+- [ ] Implement `list` function.
